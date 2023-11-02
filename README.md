@@ -106,4 +106,4 @@ The provided examples are a model of a cantilever bending test of the fabric (mo
 The modules contain docstring and comments describing the functionalities, input varibale and outputs.
 
 ## Licensing
-The software in this repository is distributed under the MIT license. Please see the license file. 
+The software in this repository is distributed under the MIT license. Please see the license file. Additionaly, the license for the hypodrape subroutine (https://bristolcompositesinstitute.github.io/HypoDrape/) that the vumat_hypodrape_asymmod subroutine is based on, is located in the src folder.
