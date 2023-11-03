@@ -104,11 +104,11 @@ The examples are a model of a cantilever bending test of the fabric (model_canti
 
 To run the examples through the command prompt, copy the VUMAT subroutine to the examples folder and use the following commands in the prompt. For the cantilever example use:
 
-    abaqus job=model_cantilever user=vumat_hypodrape_asymmod -interactive
+    abaqus job=model_cantilever user=vumat_hypodrape_asymmod double=both -interactive
 
 For the transverse shear test example use:
 
-    abaqus job=model_transverse_shear user=vumat_hypodrape_asymmod -interactive
+    abaqus job=model_transverse_shear user=vumat_hypodrape_asymmod double=both -interactive
 
 ## Documentation
 The modules contain docstring and comments describing the functionalities, input variables and outputs.
