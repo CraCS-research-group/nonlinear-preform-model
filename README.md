@@ -1,10 +1,10 @@
 # nonlinear-preform-model
-This repository contains a subroutine and parameter identification scripts for modelling nonlinear material properties in composite process simulations using ABAQUS/Explicit. The subroutine can be used to model an asymmetric constitutive law for biaxial textile materials to represent a non-constant bending stiffness, and the parameter identification scripts can be used to find parameter inputs to ABAQUS' builtin cohesive laws for modelling a nonlinear transverse shear behaviour of a whole preform consisting of multiple layers of fabric.
+This repository contains a subroutine and parameter identification scripts for modelling nonlinear material properties in composite process simulations using ABAQUS/Explicit. The subroutine can model an asymmetric constitutive law for biaxial textile materials to represent a non-constant bending stiffness. The parameter identification scripts can be used to find parameter inputs to ABAQUS' built-in cohesive laws for modelling a nonlinear transverse shear behaviour of a multilayered preform.
 
 The code was developed at **Department of Materials and Production, Aalborg University** and at **Bristol Composites Institute, University of Bristol** by Peter H. Broberg, Adam J. Thompson, Jonathan P-H. Belnoue, Stephen R. Hallett, Esben Lindgaard, and Brian L.V. Bak.
 
-The implementation of the subroutine and scrips are described in the publication: \
-*Broberg PH, Lindgaard E, Thompson AJ, Belnoue JP-H, Hallett SR, and Bak BLV (2003). "An accurate forming model for capturing the nonlinear material behaviour of multilayered binder-stabilised fabrics and predicting fibre wrinkling" (Manuscript submitted)*
+The implementation of the subroutine and scripts are described in the publication: \
+*Broberg PH, Lindgaard E, Thompson AJ, Belnoue JP-H, Hallett SR, and Bak BLV (2023). "An accurate forming model for capturing the nonlinear material behaviour of multilayered binder-stabilised fabrics and predicting fibre wrinkling" (Manuscript submitted)*
 
 The subroutine is based on the code for the fibre tracking algorithm and hypoelastic constitutive law described in the publication: \
 *Thompson AJ, Belnoue JP-H, and Hallett SR (2020). "Modelling defect formation in textiles during the double diaphragm forming process", Composites Part B: Engineering, 202:108357. doi:https://doi.org/10.1016/j.compositesb.2020.108357* \
@@ -18,7 +18,7 @@ Please feel free to use and adapt the codes, but remember to give proper attribu
 This subroutine can be used to model the behaviour of fabric materials in ABAQUS/Explicit. The subroutine is based on the hypoelastic material law and fibre tracking algorithm from https://bristolcompositesinstitute.github.io/HypoDrape/. The constitutive relation in the fibre direction is described with a multilinear stress-strain relation that can be used to model nonlinear bending behaviour. See the usage below for more information. 
 
 ### Python Files for Parameter Identification: 
-The two Python files and the module can be used to obtain the parameters needed to run the subroutine and the interface law are included in this repository. The Python file bending.py can be used to obtain the necessary parameters for the VUMAT subroutine based on an inputted moment-curvature relation. The Python file shear.py can be used to obtain the table with damage evolution based on the effective separation needed to model preform transverse shear stiffness with the ABAQUS in-built cohesive interface.
+The two Python files and the module included in this repository can be used to obtain the parameters needed to run the subroutine and the interfacial law. The Python file bending.py can be used to obtain the necessary parameters for the VUMAT subroutine based on an inputted moment-curvature relation. The Python file shear.py can obtain the table with damage evolution based on the effective separation needed to model preform transverse shear stiffness with the ABAQUS in-built cohesive interface.
 
 ### Examples
 Two example files are included in this repository. They are used to exemplify how to use the VUMAT subroutine for modelling a non-constant bending stiffness and the cohesive interface with tabular damage values for modelling a non-constant shear stiffness. The example model_cantilever.inp is a model of the cantilever bending test of the fabric material in the reference. The example model_transverse_shear.inp is a model of the transverse shear test of the preform described in the references. 
