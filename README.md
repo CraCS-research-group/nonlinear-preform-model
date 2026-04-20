@@ -4,13 +4,20 @@ This repository contains a subroutine and parameter identification scripts for m
 The code was developed at **Department of Materials and Production, Aalborg University** and at **Bristol Composites Institute, University of Bristol** by Peter H. Broberg, Adam J. Thompson, Jonathan P-H. Belnoue, Stephen R. Hallett, Esben Lindgaard, and Brian L.V. Bak.
 
 The implementation of the subroutine and scripts are described in the publication: \
-*Broberg PH, Lindgaard E, Thompson AJ, Belnoue JP-H, Hallett SR, and Bak BLV (2023). "An accurate forming model for capturing the nonlinear material behaviour of multilayered binder-stabilised fabrics and predicting fibre wrinkling" (Manuscript submitted)*
+*Broberg PH, Lindgaard E, Thompson AJ, Belnoue JP-H, Hallett SR, and Bak BLV (2023). "An accurate forming model for capturing the nonlinear material behaviour of multilayered binder-stabilised fabrics and predicting fibre wrinkling", Composites Part B: Engineering, 274:111268. doi:https://doi.org/10.1016/j.compositesb.2024.111268*
 
 The subroutine is based on the code for the fibre tracking algorithm and hypoelastic constitutive law described in the publication: \
 *Thompson AJ, Belnoue JP-H, and Hallett SR (2020). "Modelling defect formation in textiles during the double diaphragm forming process", Composites Part B: Engineering, 202:108357. doi:https://doi.org/10.1016/j.compositesb.2020.108357* \
 This subroutine can be found on the repository: https://bristolcompositesinstitute.github.io/HypoDrape/
 
 Please feel free to use and adapt the codes, but remember to give proper attribution.
+
+### Abaqus version notice
+This repository was developed and validated using Abaqus 2020–2023.
+
+Running the model in Abaqus 2026 has been found to result in too low transverse shear stiffness when using the tabular cohesive law. This issue does not appear to be related to the model formulation, but rather to changes introduced in Abaqus 2026.
+
+**Recommendation:** Use Abaqus 2023 or earlier to obtain correct and consistent results. At present, it is unclear which specific changes in Abaqus 2026 cause this behavior, and whether Abaqus 2024 and 2025 are also affected.
 
 ## Features 
 
